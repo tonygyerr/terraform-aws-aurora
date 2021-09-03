@@ -2,7 +2,7 @@ module "aurora" {
   source = "git::https://github.com/tonygyerr/terraform-aws-aurora.git"
   vpc_id                 = var.vpc_id
   app_name               = var.app_name
-  region                 = var.region
+  aws_region             = var.aws_region
   environment            = var.environment
   subnet_name            = "${var.subnet_name}_${var.environment}"
   private_db_subnet_ids  = var.private_db_subnet_ids # module.vpc.private_db_sunets
