@@ -8,9 +8,9 @@ resource "aws_cloudwatch_metric_alarm" "svc_alarm_aurora_cpu" {
   statistic           = "${var.cloud_watch_mh_statistic}"
   threshold           = "${var.cloud_watch_mh_threshold}"
   treat_missing_data  = "${var.cloud_watch_mh_missing_data}"
-  alarm_actions = [
-    local.is_prod ? "arn:aws:sns:${var.region}:${data.aws_caller_identity.current}:cloudwatch-alarm-funnel" : "arn:aws:sns:${var.region}:${data.aws_caller_identity.current}:cloudwatch-alarm-funnel",
-  ]
+  # alarm_actions = [
+  #   local.is_prod ? "arn:aws:sns:${var.region}:${data.aws_caller_identity.current}:cloudwatch-alarm-funnel" : "arn:aws:sns:${var.region}:${data.aws_caller_identity.current}:cloudwatch-alarm-funnel",
+  # ]
   alarm_description = format(
     "%s|%s|%s-%s|%s",
     var.cloud_watch_mh_description,
