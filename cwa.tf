@@ -17,8 +17,7 @@ resource "aws_cloudwatch_metric_alarm" "svc_alarm_aurora_cpu" {
     var.environment,
     "INFO",
     var.cluster_identifier,
-    "reader",
-    "CPUUtilization"
+    "reader"
   )
 
   dimensions = {
