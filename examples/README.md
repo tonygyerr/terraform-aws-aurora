@@ -29,3 +29,6 @@
 | endpoint |  |
 | port |  |
 | reader\_endpoint |  |
+
+## Contributors to this project
+- name: "Gyepi-Garbrah, Ekow (Tony) <a.gyepigarbrah@gmail.com>"
