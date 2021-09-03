@@ -82,6 +82,10 @@ variable "kms_alias_aurora" {
   type = string
 }
 
+variable "engine_mode" {
+  type = string
+}
+
 variable "engine_version" {
   type = string
 }
