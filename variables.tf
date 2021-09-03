@@ -334,3 +334,8 @@ variable "cluster_role" {
   type = string
   default = "WRITER"
 }
+
+variable "master_password" {
+  type    = string
+  default = ""
+}

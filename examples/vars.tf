@@ -90,8 +90,7 @@ variable "engine_version" {
   type = string
 }
 
-
-
-
-
-  
+variable "master_password" {
+  type    = string
+  default = ""
+} 
