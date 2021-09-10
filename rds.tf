@@ -42,21 +42,21 @@ resource "aws_rds_cluster_instance" "api_apidb_sql_rds" {
   }
 }
 
-resource "aws_db_option_group" "aurora-05-06-api-og" {
-  name                     = "mysql-08-20-api-og"
-  option_group_description = "app customer notification db, email notification db, text notification db, voice notification db, sql rds option group"
-  engine_name              = "${var.engine_name}"
-  major_engine_version     = "${var.engine_version}"
+# resource "aws_db_option_group" "aurora-05-06-api-og" {
+#   name                     = "mysql-08-20-api-og"
+#   option_group_description = "app customer notification db, email notification db, text notification db, voice notification db, sql rds option group"
+#   engine_name              = "${var.engine_name}"
+#   major_engine_version     = "${var.engine_version}"
 
-  option {
-    option_name = var.option_name
+#   option {
+#     option_name = var.option_name
 
-    option_settings {
-      name  = "TIME_ZONE"
-      value = "CST"
-    }
-  }
-}
+#     option_settings {
+#       name  = "TIME_ZONE"
+#       value = "CST"
+#     }
+#   }
+# }
 
 resource "aws_db_parameter_group" "api-aurora-db-pg" {
   name        = "api-aurora-db-pg"
