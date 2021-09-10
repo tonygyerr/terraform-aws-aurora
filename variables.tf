@@ -207,7 +207,7 @@ variable "publicly_accessible" {
 
 variable "username" {
   description = "username"
-  default     = "sanith"
+  default     = ""
 }
 
 variable "bu_retention" {
