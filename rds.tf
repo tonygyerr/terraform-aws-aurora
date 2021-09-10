@@ -49,7 +49,7 @@ resource "aws_db_option_group" "aurora-05-06-api-og" {
   major_engine_version     = "${var.engine_version}"
 
   option {
-    option_name = "Timezone"
+    option_name = var.option_name
 
     option_settings {
       name  = "TIME_ZONE"

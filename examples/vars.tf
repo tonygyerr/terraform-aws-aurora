@@ -94,3 +94,8 @@ variable "master_password" {
   type    = string
   default = ""
 } 
+
+variable "option_name" {
+  type = string
+  default = ""
+}

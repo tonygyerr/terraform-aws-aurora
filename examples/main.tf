@@ -23,6 +23,7 @@ module "aurora" {
   param_name             = var.param_name            #apidb_subnet_group_name
   role                   = var.role                  #api_rds_monitoring_arn
   max_allowed_packet     = var.max_allowed_packet
+  option_name            = var.option_name
   cluster_identifier     = var.cluster_identifier
   vpc_security_group_ids = var.vpc_security_group_ids
   secret_name            = var.secret_name #aws_secretsmanager_secret.rds.name

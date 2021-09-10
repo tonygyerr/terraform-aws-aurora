@@ -13,6 +13,11 @@ variable "app_name" {
   default = ""
 }
 
+variable "option_name" {
+  type = string
+  default = ""
+}
+
 variable "name" {
   description = "The domain name to setup DHCP for"
   default     = "api"
