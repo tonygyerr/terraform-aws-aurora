@@ -27,14 +27,7 @@ variable "tags" {
   type        = map
   description = "optional default tags"
 
-  default = {
-    Name       = "api"
-    Owner      = "cloudops@energy.com"
-    CostCenter = "N/A"
-    vpc        = "api-east-vpc"
-    env        = "prd"
-    project    = "api"
-  }
+  default = {}
 }
 
 variable "cloud_watch_mh_comparison_operator" {

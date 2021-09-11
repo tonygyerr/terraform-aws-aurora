@@ -38,7 +38,7 @@ resource "aws_rds_cluster_instance" "api_apidb_sql_rds" {
   preferred_maintenance_window = "${var.maint_window}"
 
   tags = {
-    Name = "api_dev_apidb_sql_rds"
+    Name = "api_${var.environment}_apidb_sql_rds"
   }
 }
 
