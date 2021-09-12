@@ -1,5 +1,5 @@
 resource "random_id" "rds_password" {
-  byte_length = "${var.rds["password_length"] * 3 / 4}"
+  byte_length = 20 * 3 / 4
 }
 
 resource "aws_rds_cluster" "rds" {
