@@ -33,7 +33,7 @@ resource "aws_rds_cluster_instance" "api_apidb_sql_rds" {
   identifier                   = "${var.cluster_identifier}"
   instance_class               = "${var.instance_class}"
   monitoring_interval          = "${var.monitoring_interval}"
-  monitoring_role_arn          = "${var.api_rds_monitoring_arn}"
+  monitoring_role_arn          = "${var.monitoring_role_arn}"
   publicly_accessible          = "${var.publicly_accessible}"
   preferred_maintenance_window = "${var.maint_window}"
 

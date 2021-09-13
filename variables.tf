@@ -264,6 +264,12 @@ variable "rds" {
   }
 }
 
+variable "monitoring_role_arn" {
+  description = "rds monitoring role arn'"
+  type        = string
+  default     = ""
+}
+
 variable "apidb_port" {
   type    = string
   default = "3306"
