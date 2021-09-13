@@ -24,7 +24,7 @@ resource "aws_rds_cluster" "rds" {
   }
 }
 
-resource "aws_rds_cluster_instance" "api_apidb_sql_rds" {
+resource "aws_rds_cluster_instance" "rds" {
   apply_immediately            = "${var.apply_immediately}"
   cluster_identifier           = "${aws_rds_cluster.rds.id}"
   count                        = "${var.cluster_size}"
