@@ -36,10 +36,7 @@ resource "aws_rds_cluster_instance" "rds" {
   monitoring_role_arn          = "${var.monitoring_role_arn}"
   publicly_accessible          = "${var.publicly_accessible}"
   preferred_maintenance_window = "${var.maint_window}"
-
-  tags = {
-    Name = "api_${var.environment}_apidb_sql_rds"
-  }
+  tags                         = "${var.tags}"
 }
 
 # resource "aws_db_option_group" "aurora-05-06-api-og" {
