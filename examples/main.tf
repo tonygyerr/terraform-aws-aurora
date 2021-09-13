@@ -21,7 +21,7 @@ module "aurora" {
   subnet_name            = "${var.subnet_name}_${var.environment}"
   private_db_subnet_ids  = var.private_db_subnet_ids # module.vpc.private_db_sunets
   param_name             = var.param_name            #apidb_subnet_group_name
-  role                   = var.role                  #api_rds_monitoring_arn
+  monitoring_role_arn    = var.monitoring_role_arn                  #api_rds_monitoring_arn
   max_allowed_packet     = var.max_allowed_packet
   option_name            = var.option_name
   cluster_identifier     = var.cluster_identifier

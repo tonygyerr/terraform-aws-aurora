@@ -42,7 +42,7 @@ variable "param_name" {
   type = string
 }
 
-variable "role" {
+variable "monitoring_role_arn" {
   type = string
 }
 
