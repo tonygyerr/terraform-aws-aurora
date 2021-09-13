@@ -2,10 +2,6 @@ variable "vpc_id" {
   type = string
 }
 
-# variable "aws_region" {
-#   type = string
-# }
-
 variable "environment" {}
 
 variable "app_name" {
@@ -266,12 +262,6 @@ variable "rds" {
     instance_type   = "db.r3.large"
     password_length = 20
   }
-}
-
-variable "api_rds_monitoring_arn" {
-  description = "api rds monitoring role arn'"
-  type        = string
-  default     = "arn:aws:iam::123456789012:role/rds-monitoring-role"
 }
 
 variable "apidb_port" {
