@@ -132,7 +132,7 @@ variable "engine_version" {
 
 variable "instance_class" {
   description = "instance type"
-  default     = "db.r3.large"
+  default     = ""
 }
 
 variable "initial_db" {

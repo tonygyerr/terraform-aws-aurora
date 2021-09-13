@@ -34,6 +34,7 @@ module "aurora" {
   iam_enabled            = var.iam_enabled
   instance_identifier    = var.instance_identifier
   instance_count         = var.instance_count
+  instance_class         = var.instance_class
   kms_alias_aurora       = var.kms_alias_aurora
   username               = var.username
   master_password        = var.master_password #aws_secretsmanager_secret_version.rds.secret_string

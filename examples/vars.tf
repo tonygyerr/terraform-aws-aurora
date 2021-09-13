@@ -15,6 +15,11 @@ variable "instance_count" {
   type = string
 }
 
+variable "instance_class" {
+  description = "instance type"
+  type = string
+}
+
 variable "private_db_subnet_ids" {
   description = "application private subnets for the vpc"
   type        = list
