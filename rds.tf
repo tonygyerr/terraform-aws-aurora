@@ -25,12 +25,12 @@ resource "aws_rds_cluster" "rds" {
 }
 
 resource "aws_rds_cluster_instance" "rds" {
+  count                        = "${var.cluster_size}"
   apply_immediately            = "${var.apply_immediately}"
   cluster_identifier           = "${aws_rds_cluster.rds.id}"
-  count                        = "${var.cluster_size}"
   db_parameter_group_name      = "${aws_db_parameter_group.api-aurora-db-pg.id}"
   db_subnet_group_name         = "${var.subnet_group_name}"
-  identifier                   = "${var.cluster_identifier}"
+  identifier                   = "rds-aurora-cluster-${count.index}"
   instance_class               = "${var.instance_class}"
   monitoring_interval          = "${var.monitoring_interval}"
   monitoring_role_arn          = "${var.monitoring_role_arn}"
