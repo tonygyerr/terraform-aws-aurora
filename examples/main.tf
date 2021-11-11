@@ -18,6 +18,7 @@ module "aurora" {
   vpc_id                 = var.vpc_id
   app_name               = var.app_name
   environment            = var.environment
+  initial_db             = var.initial_db
   subnet_name            = "${var.subnet_name}_${var.environment}"
   private_db_subnet_ids  = var.private_db_subnet_ids # module.vpc.private_db_sunets
   param_name             = var.param_name            #apidb_subnet_group_name
