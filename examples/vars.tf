@@ -20,6 +20,11 @@ variable "instance_class" {
   type = string
 }
 
+variable "initial_db" {
+  description = "initial table name"
+  default     = ""
+}
+
 variable "private_db_subnet_ids" {
   description = "application private subnets for the vpc"
   type        = list
