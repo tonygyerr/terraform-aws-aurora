@@ -10,7 +10,7 @@ resource "aws_rds_cluster" "rds" {
   db_subnet_group_name            = "${var.subnet_group_name}"
   final_snapshot_identifier       = "${var.final_snapshot_identifier}"
   # kms_key_id                      = "${aws_kms_key.aurora.arn}"
-  master_password                 = random_id.rds.b64_std #var.master_password #random_id.rds_password.b64_std
+  master_password                 = "${var.master_password}" #random_id.rds.b64_std
   master_username                 = "${var.username}" #data.aws_secretsmanager_secret.rds.name
   preferred_backup_window         = "${var.preferred_backup_window}"
   preferred_maintenance_window    = "${var.maint_window}"

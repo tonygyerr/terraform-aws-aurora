@@ -38,6 +38,6 @@ module "aurora" {
   instance_class         = var.instance_class
   kms_alias_aurora       = var.kms_alias_aurora
   username               = var.username
-  master_password        = var.master_password #aws_secretsmanager_secret_version.rds.secret_string
+  master_password        = "${data.aws_secretsmanager_secret_version.rds.secret_string}"  #aws_secretsmanager_secret_version.rds.secret_string #var.master_password 
   tags                   = var.tags
 }
