@@ -17,6 +17,7 @@ module "aurora" {
   source = "git::https://github.com/tonygyerr/terraform-aws-aurora.git"
   vpc_id                 = var.vpc_id
   app_name               = var.app_name
+  db_port                = var.db_port
   environment            = var.environment
   initial_db             = var.initial_db
   subnet_name            = "${var.subnet_name}_${var.environment}"
@@ -37,6 +38,7 @@ module "aurora" {
   instance_count         = var.instance_count
   instance_class         = var.instance_class
   kms_alias_aurora       = var.kms_alias_aurora
+  private_db_subnets     = var.private_db_subnets
   username               = var.username
   master_password        = "${data.aws_secretsmanager_secret_version.rds.secret_string}"  #aws_secretsmanager_secret_version.rds.secret_string #var.master_password 
   tags                   = var.tags

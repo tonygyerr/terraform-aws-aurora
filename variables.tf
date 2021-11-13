@@ -9,6 +9,12 @@ variable "app_name" {
   default = ""
 }
 
+variable "private_db_subnets" {
+  type        = list
+  description = "List of Private Database Subnets"
+  default     = []
+}
+
 variable "option_name" {
   type = string
   default = ""
@@ -270,9 +276,9 @@ variable "monitoring_role_arn" {
   default     = ""
 }
 
-variable "apidb_port" {
+variable "db_port" {
   type    = string
-  default = "3306"
+  default = ""
 }
 
 variable "subnet_name" {

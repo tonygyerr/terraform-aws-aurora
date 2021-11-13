@@ -100,6 +100,16 @@ variable "engine_version" {
   type = string
 }
 
+variable "db_port" {
+  type = string
+}
+
+variable "private_db_subnets" {
+  type        = list
+  description = "List of Private Database Subnets"
+  default     = []
+}
+
 variable "master_password" {
   type    = string
   default = ""

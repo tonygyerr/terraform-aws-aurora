@@ -4,17 +4,10 @@ resource "aws_security_group" "rds" {
   vpc_id      = "${var.vpc_id}"
 
   ingress {
-    from_port   = 22
-    to_port     = 22
+    from_port   = var.db_port
+    to_port     = var.db_port
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  ingress {
-    from_port   = 8182
-    to_port     = 8182
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = var.private_db_subnets
   }
 
   egress {
