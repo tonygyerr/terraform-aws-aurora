@@ -126,7 +126,7 @@ variable "subnet_group_name" {
 
 variable "engine_name" {
   description = "engine name"
-  default     = "aurora"
+  default     = "mysql"
 }
 
 
@@ -257,7 +257,7 @@ variable "license_model" {
 
 variable "cluster_version" {
   description = "version of cluster database"
-  default     = "aurora5.6"
+  default     = "mysql5.7"
 }
 
 variable "rds" {
