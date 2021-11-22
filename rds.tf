@@ -16,7 +16,7 @@ resource "aws_rds_cluster" "rds" {
   preferred_maintenance_window    = "${var.maint_window}"
   skip_final_snapshot             = "${var.skip_final_snapshot}"
   storage_encrypted               = "${var.storage_encrypted}"
-  vpc_security_group_ids          = ["${aws_security_group.rds.id}"]
+  vpc_security_group_ids          = [vpc_security_group_ids] #["${aws_security_group.rds.id}"]
   cluster_identifier              = "${var.cluster_identifier}"
 
   lifecycle {
@@ -29,7 +29,7 @@ resource "aws_rds_cluster_instance" "rds" {
   apply_immediately            = "${var.apply_immediately}"
   cluster_identifier           = "${aws_rds_cluster.rds.id}"
   db_parameter_group_name      = "${aws_db_parameter_group.api-aurora-db-pg.id}"
-  db_subnet_group_name         = aws_db_subnet_group.rds.name #"${var.subnet_group_name}"
+  db_subnet_group_name         = "${var.subnet_group_name}" #aws_db_subnet_group.rds.name 
   identifier                   = "rds-aurora-cluster-${count.index}"
   instance_class               = "${var.instance_class}"
   monitoring_interval          = "${var.monitoring_interval}"

@@ -16,6 +16,10 @@ output "reader_endpoint" {
   value = "${aws_rds_cluster.rds.reader_endpoint}"
 }
 
+output "security_group" {
+  value = "${aws_security_group.rds.id}"
+}
+
 output "subnet_group_name" {
   value = "${aws_db_subnet_group.rds.name}"
 }
