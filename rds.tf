@@ -56,7 +56,7 @@ resource "aws_rds_cluster_instance" "rds" {
 # }
 
 resource "aws_db_parameter_group" "api-aurora-db-pg" {
-  name        = "api-aurora-db-pg"
+  name        = "${var.app_name}-aurora-db-pg"
   family      = "${var.cluster_version}"
   description = "app aurora parameter group"
   # parameter   = ["${var.cluster_parameters}"]
@@ -67,7 +67,7 @@ resource "aws_db_parameter_group" "api-aurora-db-pg" {
 }
 
 resource "aws_rds_cluster_parameter_group" "api-aurora-rds-cluster-pg" {
-  name        = "api-aurora-rds-cluster-pg"
+  name        = "${var.app_name}-aurora-rds-cluster-pg"
   family      = "${var.cluster_version}"
   description = "app cluster parameter group"
   # parameter   = ["${var.cluster_parameters}"]

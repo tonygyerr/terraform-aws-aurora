@@ -64,6 +64,10 @@ variable "cluster_identifier" {
   type = string
 }
 
+variable "cluster_version" {
+  type = string
+}
+
 variable "vpc_security_group_ids" {
   type = list
 }
