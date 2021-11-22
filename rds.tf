@@ -16,7 +16,7 @@ resource "aws_rds_cluster" "rds" {
   preferred_maintenance_window    = "${var.maint_window}"
   skip_final_snapshot             = "${var.skip_final_snapshot}"
   storage_encrypted               = "${var.storage_encrypted}"
-  vpc_security_group_ids          = [var.vpc_security_group_ids] #["${aws_security_group.rds.id}"]
+  vpc_security_group_ids          = var.vpc_security_group_ids #["${aws_security_group.rds.id}"]
   cluster_identifier              = "${var.cluster_identifier}"
 
   lifecycle {
