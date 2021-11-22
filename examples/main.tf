@@ -27,7 +27,7 @@ module "aurora" {
   max_allowed_packet     = var.max_allowed_packet
   option_name            = var.option_name
   cluster_identifier     = var.cluster_identifier
-  vpc_security_group_ids = var.vpc_security_group_ids
+  vpc_security_group_ids = [module.aurora.security_group] #var.vpc_security_group_ids
   secret_name            = var.secret_name #aws_secretsmanager_secret.rds.name
   snapshot_ind           = var.snapshot_ind
   engine_mode            = var.engine_mode
