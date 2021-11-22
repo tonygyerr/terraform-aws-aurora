@@ -259,6 +259,10 @@ variable "cluster_version" {
   type = string
 }
 
+variable "cluster_pg_version" {
+  type = string
+}
+
 variable "rds" {
   description = "(Required) map of variables for RDS"
   type        = map

@@ -68,6 +68,10 @@ variable "cluster_version" {
   type = string
 }
 
+variable "cluster_pg_version" {
+  type = string
+}
+
 variable "vpc_security_group_ids" {
   type = list
 }

@@ -28,6 +28,7 @@ module "aurora" {
   option_name            = var.option_name
   cluster_identifier     = var.cluster_identifier
   cluster_version        = var.cluster_version
+  cluster_pg_version     = var.cluster_pg_version
   vpc_security_group_ids = [module.aurora.security_group] #var.vpc_security_group_ids
   secret_name            = var.secret_name #aws_secretsmanager_secret.rds.name
   snapshot_ind           = var.snapshot_ind
