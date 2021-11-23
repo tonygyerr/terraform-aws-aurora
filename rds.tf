@@ -68,7 +68,7 @@ resource "aws_db_parameter_group" "api-aurora-db-pg" {
 
 resource "aws_rds_cluster_parameter_group" "api-aurora-rds-cluster-pg" {
   name        = "${var.app_name}-aurora-rds-cluster-pg"
-  family      = "${var.cluster_version}"
+  family      = "${var.cluster_pg_version}"
   description = "app cluster parameter group"
   # parameter   = ["${var.cluster_parameters}"]
 
