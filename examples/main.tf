@@ -32,6 +32,7 @@ module "aurora" {
   vpc_security_group_ids = [module.aurora.security_group] #var.vpc_security_group_ids
   secret_name            = var.secret_name #aws_secretsmanager_secret.rds.name
   snapshot_ind           = var.snapshot_ind
+  engine_name            = var.engine_name
   engine_mode            = var.engine_mode
   engine_version         = var.engine_version
   backtrack_window       = var.backtrack_window
@@ -41,6 +42,7 @@ module "aurora" {
   instance_class         = var.instance_class
   kms_alias_aurora       = var.kms_alias_aurora
   private_db_subnets     = var.private_db_subnets
+  subnet_group_name      = var.subnet_group_name
   username               = var.username
   master_password        = aws_secretsmanager_secret_version.rds.secret_string #"${data.aws_secretsmanager_secret_version.rds.secret_string}" #var.master_password 
   tags                   = var.tags
