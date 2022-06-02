@@ -43,6 +43,7 @@ module "aurora" {
   kms_alias_aurora       = var.kms_alias_aurora
   private_db_subnets     = var.private_db_subnets
   subnet_group_name      = var.subnet_group_name
+  sns_topic              = var.sns_topic #data.aws_sns_topic.sns.arn
   username               = var.username
   master_password        = aws_secretsmanager_secret_version.rds.secret_string #"${data.aws_secretsmanager_secret_version.rds.secret_string}" #var.master_password 
   tags                   = var.tags
