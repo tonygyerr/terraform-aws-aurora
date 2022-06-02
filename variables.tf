@@ -121,12 +121,12 @@ variable "cluster_instance_event_categories" {
 
 variable "subnet_group_name" {
   description = "apidb_subnet_group"
-  default     = "apidb_subnet_group"
+  default     = ""
 }
 
 variable "engine_name" {
   description = "engine name"
-  default     = "mysql"
+  default     = ""
 }
 
 
