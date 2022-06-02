@@ -132,3 +132,13 @@ variable "username" {
   type    = string
   default = ""
 }
+
+variable "subnet_group_name" {
+  description = "apidb_subnet_group"
+  default     = ""
+}
+
+variable "engine_name" {
+  description = "engine name"
+  default     = ""
+}
