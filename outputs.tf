@@ -34,7 +34,3 @@ output "master_password" {
 output "engine" {
   value = "${aws_rds_cluster.rds.engine}"
 }
-
-output "port" {
-  value = "${aws_rds_cluster.rds.port}"
-}
