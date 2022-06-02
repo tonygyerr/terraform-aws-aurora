@@ -30,7 +30,3 @@ output "master_password" {
 output "engine" {
   value = "${module.aurora.engine}"
 }
-
-output "port" {
-  value = "${module.aurora.port}"
-}
