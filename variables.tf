@@ -315,6 +315,11 @@ variable "engine_mode" {
   default = "provisioned"
 }
 
+variable "engine" {
+  description = "Name of the engine."
+  default     = ""
+}
+
 variable "backtrack_window" {
   type    = string
   default = "43200"
