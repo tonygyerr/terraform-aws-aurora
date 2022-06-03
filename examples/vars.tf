@@ -147,3 +147,9 @@ variable "sns_topic" {
   type    = string
   default = ""
 }
+
+variable "engine" {
+  description = "Name of the engine"
+  default     = ""
+}
+
