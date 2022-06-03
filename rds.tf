@@ -8,6 +8,8 @@ resource "aws_rds_cluster" "rds" {
   database_name                   = "${var.initial_db}" # initial database name
   db_cluster_parameter_group_name = "${aws_rds_cluster_parameter_group.api-aurora-rds-cluster-pg.id}"
   db_subnet_group_name            = aws_db_subnet_group.rds.name #"${var.subnet_group_name}"
+  engine                          = "${var.engine}"
+  engine_version                  = "${var.engine_version}"
   final_snapshot_identifier       = "${var.final_snapshot_identifier}"
   # kms_key_id                      = "${aws_kms_key.aurora.arn}"
   master_password                 = "${var.master_password}" #random_id.rds.b64_std
@@ -30,6 +32,7 @@ resource "aws_rds_cluster_instance" "rds" {
   cluster_identifier           = "${aws_rds_cluster.rds.id}"
   db_parameter_group_name      = "${aws_db_parameter_group.api-aurora-db-pg.id}"
   db_subnet_group_name         = "${var.subnet_group_name}" #aws_db_subnet_group.rds.name 
+  engine                       = "${aws_rds_cluster.rds.engine}"
   identifier                   = "rds-aurora-cluster-${count.index}"
   instance_class               = "${var.instance_class}"
   monitoring_interval          = "${var.monitoring_interval}"
