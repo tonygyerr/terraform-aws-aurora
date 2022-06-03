@@ -32,6 +32,7 @@ module "aurora" {
   vpc_security_group_ids = [module.aurora.security_group] #var.vpc_security_group_ids
   secret_name            = var.secret_name #aws_secretsmanager_secret.rds.name
   snapshot_ind           = var.snapshot_ind
+  engine                 = var.engine
   engine_name            = var.engine_name
   engine_mode            = var.engine_mode
   engine_version         = var.engine_version
